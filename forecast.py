@@ -15,7 +15,11 @@ preamble = """<!DOCTYPE html>
   <head>
     <link rel=\"stylesheet\" href=\"https://usetrmnl.com/css/latest/plugins.css\">
     <link rel=\"stylesheet\" href=\"https://usetrmnl.com/js/latest/plugins.js\">
-  </head>"""
+  </head>
+  <div class="title_bar">
+  <span class="title">NWAC Weather Synopsis</span>
+</div>
+"""
 footer = "</html>"
 forecast_date = soup.find_all("div", {"class" : "forecast-info"})
 synopsis = soup.find_all("div", {"class" : "synopsis"})

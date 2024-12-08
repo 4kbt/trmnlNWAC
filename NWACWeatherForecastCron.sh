@@ -5,6 +5,7 @@ cd /home/charlie/trmnlNWAC/
 FN=nwac_weather_forecast.html
 
 python3 forecast.py | 
+sed 's/<div class="forecast-info">//'|
 sed 's/<div class="forecast-date">//'|
 sed 's/<\/div>//' |
 sed 's/<div class="forecaster">//' | 

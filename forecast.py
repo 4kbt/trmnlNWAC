@@ -10,7 +10,12 @@ page = http.request('GET',forecast_site)
 
 soup = BeautifulSoup(page.data)
 
-preamble = "<html>"
+preamble = '<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://usetrmnl.com/css/latest/plugins.css">
+    <link rel="stylesheet" href="https://usetrmnl.com/js/latest/plugins.js">
+  </head>'
 footer = "</html>"
 forecast_date = soup.find_all("div", {"class" : "forecast-info"})
 synopsis = soup.find_all("div", {"class" : "synopsis"})

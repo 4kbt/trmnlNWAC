@@ -7,6 +7,8 @@ FN=nwac_weather_forecast.html
 python3 forecast.py > $FN
 git stage $FN
 
+./rainier.sh
+
 timestamp(){ 
    date +"%d.%m.%Y um %H:%M" 
 }

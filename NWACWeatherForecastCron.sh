@@ -4,7 +4,13 @@ cd /home/charlie/trmnlNWAC/
 
 FN=nwac_weather_forecast.html
 
-python3 forecast.py > $FN
+python3 forecast.py | 
+sed 's/<div class="forecast-date">//'|
+sed 's/<\/div>//' |
+sed 's/<div class="forecaster">//' | 
+sed 's/<div class="synopsis">//' > $FN
+
+
 git stage $FN
 
 ./rainier.sh

@@ -15,6 +15,7 @@ sed 's/<div class="synopsis">//' > $FN
 git stage $FN
 
 ./rainier.sh
+./OSOALP.sh
 
 timestamp(){ 
    date +"%d.%m.%Y um %H:%M" 
